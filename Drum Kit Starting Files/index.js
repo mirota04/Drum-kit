@@ -7,9 +7,9 @@ for(var i = 0; i < length; i++){
     });
 }
 
-document.addEventListener("keydown", function(event) {
-    makeSound(event.key);
-    animation(event.key);
+document.addEventListener("keydown", (e) => {
+    makeSound(e.key);
+    animation(e.key);
 });
 
 function makeSound(key) {
@@ -59,7 +59,7 @@ function animation(currentKey){
 
     activeKey.classList.add("pressed");
 
-    setTimeout(function () {
+    setTimeout( () => {
         activeKey.classList.remove("pressed");
     }, 100);
 }
